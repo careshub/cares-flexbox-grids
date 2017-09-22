@@ -1,0 +1,16 @@
+{
+  "name": "cares-flexbox-grids",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-postcss": "latest",
+    "postcss-flexbugs-fixes": "latest",
+    "autoprefixer": "latest",
+    "cssnano": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-less": "latest",
+    "load-grunt-tasks": "latest",
+    "matchdep": "latest"
+  },
+  "license": "GPL-2.0+",
+  "version": "1.0.0"
+}
