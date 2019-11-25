@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 				},
 				processors: [
 					require('postcss-flexbugs-fixes'),
-					require('autoprefixer')({browsers: 'last 2 versions'}),
+					require('autoprefixer')({browsers: 'last 2 versions, Chrome >= 13'}),
 					require('cssnano')({ discardUnused: { fontFace: false }, zindex: false })
 				]
 			},

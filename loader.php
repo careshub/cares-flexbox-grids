@@ -24,7 +24,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 function cares_flexbox_grids_init() {
 
-	wp_enqueue_style( 'cares-flexbox-grids-styles', plugin_dir_url( __FILE__ ) . 'css/flexbox-grids.css', array(), '1.0.1' );
+	wp_enqueue_style( 'cares-flexbox-grids-styles', plugin_dir_url( __FILE__ ) . 'css/flexbox-grids.css', array(), '1.0.2' );
 
 }
 add_action( 'init', 'cares_flexbox_grids_init' );

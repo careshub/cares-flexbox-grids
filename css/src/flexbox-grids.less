@@ -298,6 +298,69 @@
 	}
 }
 
+@media (min-width:60em) {
+	.xl-Grid--fit > .Grid-cell {
+		flex: 1;
+	}
+	.xl-Grid--full > .Grid-cell {
+		flex: 0 0 100%;
+	}
+	.xl-Grid--1of2 > .Grid-cell {
+		flex: 0 0 auto;
+		width: 50%;
+	}
+	.xl-Grid--1of3 > .Grid-cell {
+		flex: 0 0 auto;
+		width: 33.3%; // For IE 10 & 11 compatibility.
+	}
+	.xl-Grid--1of3 > .Grid-cell.u-2of3 {
+		flex: 0 0 auto;
+		width: 66.6%;
+	}
+	.xl-Grid--1of4 > .Grid-cell {
+		// There's a bug in IE 10 and 11 that causes the flex-basis to calculate in a content-box world.
+		// See https://github.com/philipwalton/flexbugs#7-flex-basis-doesnt-account-for-box-sizingborder-box
+		// flex: 0 0 25%; <-- This is the "normal" flexbox approach
+		flex: 0 0 auto; // This plus the explicit width works with IE 10 & 11.
+		width: 25%;
+	}
+	.xl-Grid--1of4 > .Grid-cell.u-2of4 {
+		flex: 0 0 auto;
+		width: 50%;
+	}
+	.xl-Grid--1of4 > .Grid-cell.u-3of4 {
+		flex: 0 0 auto;
+		width: 75%;
+	}
+
+	// Alternate version allows for some flex.
+	// Choose the break point by specifying the small, medium, xl
+	// Then only specify some cell sizes, rest can be auto.
+	.xl-Grid,
+	.xl-Grid--fit {
+		> .Grid-cell.u-1of3 {
+			flex: 0 0 auto;
+			width: 33.3%;
+		}
+		> .Grid-cell.u-2of3 {
+			flex: 0 0 auto;
+			width: 66.6%;
+		}
+		> .Grid-cell.u-1of4 {
+			flex: 0 0 auto;
+			width: 25%;
+		}
+		> .Grid-cell.u-2of4 {
+			flex: 0 0 auto;
+			width: 50%;
+		}
+		> .Grid-cell.u-3of4 {
+			flex: 0 0 auto;
+			width: 75%;
+		}
+	}
+}
+
 .Grid--gutters {
 	margin: -1em 0 1em -1em;
 	> .Grid-cell {
@@ -373,6 +436,27 @@
 		}
 	}
 	.large-Grid--guttersXl {
+		margin: -2em 0 2em -2em;
+		> .Grid-cell {
+			padding: 2em 0 0 2em;
+		}
+	}
+}
+
+@media (min-width:60em) {
+	.xl-Grid--gutters {
+		margin: -1em 0 1em -1em;
+		> .Grid-cell {
+			padding: 1em 0 0 1em;
+		}
+	}
+	.xl-Grid--guttersLg {
+		margin: -1.5em 0 1.5em -1.5em;
+		> .Grid-cell {
+			padding: 1.5em 0 0 1.5em;
+		}
+	}
+	.xl-Grid--guttersXl {
 		margin: -2em 0 2em -2em;
 		> .Grid-cell {
 			padding: 2em 0 0 2em;
