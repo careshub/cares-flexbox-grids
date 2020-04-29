@@ -29,6 +29,10 @@
 .Grid--fill-height {
 	flex-direction: column;
 	justify-content: space-between;
+	height: 100%;
+	& > .Grid-cell {
+		flex-grow: inherit;
+	}
 }
 
 .Grid--nowrap {
