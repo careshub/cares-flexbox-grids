@@ -544,3 +544,12 @@
 		}
 	}
 }
+
+// The column-oriented Grid--fill-height style does not work in IE 10 & 11.
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	/* IE10 & 11 specific styles go here */
+	.Grid--fill-height,
+	.Grid--fill-height .Grid-cell {
+		display: block;
+	}
+}
