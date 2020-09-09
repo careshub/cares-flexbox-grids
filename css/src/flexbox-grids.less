@@ -22,6 +22,10 @@
 	align-items: flex-start;
 }
 
+.Grid--center {
+	align-items: center;
+}
+
 .Grid--bottom {
 	align-items: flex-end;
 }
@@ -362,6 +366,35 @@
 			flex: 0 0 auto;
 			width: 75%;
 		}
+	}
+}
+
+// Provide vertical spacing for grids that haven't taken effect yet.
+.small-Grid--gutters,
+.med-Grid--gutters,
+.large-Grid--gutters,
+.xl-Grid--gutters {
+	margin-bottom: 1em;
+	> .Grid-cell {
+		padding-bottom: 1em
+	}
+}
+.small-Grid--guttersLg,
+.med-Grid--guttersLg,
+.large-Grid--guttersLg,
+.xl-Grid--guttersLg {
+	margin-bottom: 1.5em;
+	> .Grid-cell {
+		padding-bottom: 1.5em
+	}
+}
+.small-Grid--guttersXl,
+.med-Grid--guttersXl,
+.large-Grid--guttersXl,
+.xl-Grid--guttersXl {
+	margin-bottom: 2em;
+	> .Grid-cell {
+		padding-bottom: 2em
 	}
 }
 
